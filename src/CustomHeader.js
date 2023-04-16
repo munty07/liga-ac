@@ -2,19 +2,17 @@ import logo from './logo.svg';
 import './CustomHeader.css';
 function CustomHeader(props) {
     // console.log("props", props);
+    const isPremium = true;
+
+    // const bool = Boolean(isPremium);
+    // const boolean = !!(isPremium); // dubla negare
     return (
-        // <header>
-        //     <ul>
-        //         <li>
-        //             <img src={logo} className="App-logo" alt="logo" width="50px" height="50px" />
-        //         </li>
-        //         <li><a href="#home">Home</a></li>
-        //         <li><a href="#contact">Contact</a></li>
-        //         <li><a href="#about">About</a></li>
-        //     </ul>
-        // </header>
         <header className="Header">
-            <img src={logo} className="App-logo" alt="logo" width="50px" height="50px" />
+            <div style={{ display: "flex" }}>
+                <img src={logo} className="App-logo" alt="logo" width="50px" height="50px" />
+                {/* {isPremium && <h4>Premium</h4>} */}
+                {isPremium ? <h4 className="Premium">Premium</h4> : null}
+            </div>
             <p>{props.title}</p>
         </header>
     );
