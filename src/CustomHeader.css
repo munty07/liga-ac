@@ -1,3 +1,7 @@
 .Header{
-    background-color: brown;
+    background-color: salmon;
+    display: flex;
+    justify-content: space-between;
+    /* top / right / bottom / left */
+    padding: 0 20px;
 }
