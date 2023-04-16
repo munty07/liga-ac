@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <CustomHeader title={'Liga AC Player'}></CustomHeader>
       <main style={{ display: "flex", justifyContent: "space-between" }}>
-        <VideoPlayer />
+        <VideoPlayer title={"Video1"} />
         <Playlist />
       </main>
       <CustomFooter />
