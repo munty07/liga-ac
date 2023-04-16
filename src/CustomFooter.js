@@ -1,7 +1,8 @@
+import './CustomFooter.css';
 
 function CustomFooter() {
     return (
-        <footer>
+        <footer className="Footer">
             <hr />
             &copy; Liga AC
         </footer>
