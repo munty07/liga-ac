@@ -1,4 +1,5 @@
 import CustomHeader from './CustomHeader';
+import CustomFooter from './CustomFooter';
 // import logoVideo from './logoVideo.svg';
 import './App.css';
 
@@ -10,10 +11,8 @@ function App() {
       <main>
         Content
       </main>
-      <footer>
-        <hr />
-        &copy; Liga AC
-      </footer>
+      <CustomFooter />
+      {/* daca nu avem nimic in tag (self closing) or <CustomFooter></CustomFooter> */}
     </div>
   );
 }
