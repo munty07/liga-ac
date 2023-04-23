@@ -1,13 +1,25 @@
+import { useContext, useEffect, useRef } from "react";
+import { VideoContext } from "./App";
+import { Comments } from "./Comments.js";
 
-function VideoPlayer(props) {
-    return <div>
-        {/* (controls) == (controls=true) */}
-        <video width={300} height={200} controls>
-            <source src="movie.mp4"></source>
-        </video>
-        <h3>{props.title}</h3>
+function VideoPlayer() {
+    const videoRef = useRef();
+    const { currentVideo: { src, title } } = useContext(VideoContext);
 
-    </div>
+    useEffect(() => {
+        videoRef.current.load();
+    }, [src]);
+
+    return (
+        <div>
+            <video ref={videoRef} width={300} height={200} controls>
+                <source src={src}></source>
+            </video>
+            <h3>{title}</h3>
+            <Comments></Comments>
+        </div>
+    )
+
 }
 
 export default VideoPlayer;
